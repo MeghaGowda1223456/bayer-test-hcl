@@ -2,15 +2,14 @@
 
 // project imports
 import MainLayout from "../layout/MainLayout";
-import Loadable from "../ui-component/Loadable";
-import BalanceComponent from "../pages/balancePage/BalanceComponent";
-import LeaderBoardComponent from "../pages/leaderboardPage/LeaderBoardComponent";
-import GameLaunch from "../pages/GameLaunch";
 
-import MyrewardsComponent from "../pages/rewardsPage/MyrewardsComponent";
-import Appointment from "../pages/Appointment";
+
+
+
+
 import LoginForm from "../pages/bayers/loginpage/Loginpage";
 import DashBoardComponent from "../pages/bayers/dashboardPage/DashBoardComponent";
+import Apointments from "../pages/Appointment";
 
 
 // dashboard routing
@@ -51,27 +50,17 @@ const MainRoutes = {
         },
         {
           path: "patient-list",
-          element: <LoginForm />,
+          element: <>Coming Soon...</>,
         },
     
+      
+     
         {
-          path: "rewards",
-          element: <MyrewardsComponent />,
+          path: "apointments",
+          element: <Apointments/>,
         },
         {
-          path: "lederboard",
-          element: (
-            <div>
-              <LeaderBoardComponent />
-            </div>
-          ),
-        },
-        {
-          path: "marketplace",
-          element: <h1>Coming Soon...</h1>,
-        },
-        {
-          path: "P2P-Social",
+          path: "messeges",
           element: <h1>Coming Soon...</h1>,
         },
       ],

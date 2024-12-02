@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { ArrowBackOutlined } from "@mui/icons-material";
 import footerImg from "../assets/notfound_footer_logo.png";
-import p2plogo from "../assets/notfound_logo.png";
+
 const NotFound = () => {
   return (
     <Box
@@ -28,7 +28,11 @@ const NotFound = () => {
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <img src={p2plogo} alt="Logo" style={{ height: 30 }} />
+            <img
+              src={"https://www.bayer.com/themes/custom/bayer_cpa/logo.svg"}
+              alt="Logo"
+              style={{ height: 30 }}
+            />
           </Typography>
           {/* <Button
             color="inherit"
@@ -77,7 +81,7 @@ const NotFound = () => {
                 variant="body1"
                 sx={{ mt: 1, color: "#fff", fontSize: "14px" }}
               >
-                You reaching here was destined by the Pear 🍐 Gods.
+                You reaching here was destined
               </Typography>
               <Button
                 variant="contained"
