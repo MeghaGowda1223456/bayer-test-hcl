@@ -7,10 +7,21 @@ import MainLayout from "../layout/MainLayout";
 
 
 
+
 import LoginForm from "../pages/bayers/loginpage/Loginpage";
 import DashBoardComponent from "../pages/bayers/dashboardPage/DashBoardComponent";
 import Apointments from "../pages/Appointment";
 import ProtectedRoute from "./PrivateRouts";
+
+
+import Loadable from "../ui-component/Loadable";
+import BalanceComponent from "../pages/balancePage/BalanceComponent";
+import LeaderBoardComponent from "../pages/leaderboardPage/LeaderBoardComponent";
+import GameLaunch from "../pages/GameLaunch";
+import DashBoardComponent from "../pages/dashboardPage/DashBoardComponent";
+import MyrewardsComponent from "../pages/rewardsPage/MyrewardsComponent";
+import Appointment from "../pages/Appointment";
+import WelcomePage from "../pages/WelcomePage";
 
 
 // dashboard routing
@@ -69,7 +80,64 @@ const MainRoutes = {
       ],
     },
 
-  
+    // {
+    //   path: "utils",
+    //   children: [
+    //     {
+    //       path: "util-typography",
+    //       element: <UtilsTypography />,
+    //     },
+    //   ],
+    // },
+    // {
+    //   path: "utils",
+    //   children: [
+    //     {
+    //       path: "util-color",
+    //       element: <UtilsColor />,
+    //     },
+    //   ],
+    // },
+    // {
+    //   path: "utils",
+    //   children: [
+    //     {
+    //       path: "util-shadow",
+    //       element: <UtilsShadow />,
+    //     },
+    //   ],
+    // },
+    // {
+    //   path: 'icons',
+    //   children: [
+    //     {
+    //       path: 'tabler-icons',
+    //       element: <UtilsTablerIcons />
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: 'icons',
+    //   children: [
+    //     {
+    //       path: 'material-icons',
+    //       element: <UtilsMaterialIcons />
+    //     }
+    //   ]
+    // },
+    {
+      path: "sample-page",
+      element: <>hhhhhhhhhhhhhhhhsssssss</>,
+    },
+    {
+      path: "appointment",
+      element: <Appointment />
+    },
+    {
+      path: "welcome",
+      element: <WelcomePage />
+    }
+
   ],
   // path: "/main",
   // element: <div style={{ color: "red" }}> hfjdfhjfdh</div>,
