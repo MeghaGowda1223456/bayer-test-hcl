@@ -9,6 +9,7 @@ import GameLaunch from "../pages/GameLaunch";
 import DashBoardComponent from "../pages/dashboardPage/DashBoardComponent";
 import MyrewardsComponent from "../pages/rewardsPage/MyrewardsComponent";
 import Appointment from "../pages/Appointment";
+import WelcomePage from "../pages/WelcomePage";
 
 // dashboard routing
 // const DashboardDefault = Loadable(lazy(() => import("../views/dashboard")));
@@ -128,6 +129,10 @@ const MainRoutes = {
     {
       path: "appointment",
       element: <Appointment />
+    },
+    {
+      path: "welcome",
+      element: <WelcomePage />
     }
   ],
   // path: "/main",
