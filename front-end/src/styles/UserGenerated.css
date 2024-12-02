@@ -1,0 +1,42 @@
+.user-generated-container {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #4F21A1, #200d42);
+    color: white;
+    text-align: center;
+}
+
+.user-generated-heading {
+    font-size: 54px;
+    /* letter-spacing: ; */
+    margin-bottom: 30px;
+}
+
+.simple-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 806px;
+    margin: 0px auto;
+}
+
+.user-generated-box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon-button {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.user-generated-subheading {
+    font-size: 15.27px;
+}

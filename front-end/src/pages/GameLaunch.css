@@ -1,0 +1,309 @@
+/* src/pages/GameLaunch.css */
+
+.game-launch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  /* Dark background */
+}
+
+.game-launch-box {
+  background-color: #1e1e1e;
+  /* Dark box background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Darker shadow */
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  color: white;
+  /* White text color */
+}
+.game-launch-box2 {
+  background-color: white;
+  /* Dark box background */
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Darker shadow */
+  text-align: center;
+  width: 100%;
+  color: black;
+  /* White text color */
+}
+.game-heading-container {
+  border: 1px solid transparent;
+  width: fit-content;
+  h1 {
+    line-height: 0px;
+    font-size: 36px;
+    font-size: 700;
+  }
+}
+.dcl-main-container {
+  max-width: 979px;
+  width: 979px;
+  margin: 20px auto;
+}
+.dcl-img-container {
+  max-width: 979px;
+  width: 979px;
+  margin-top: 0px;
+}
+.dcl-player-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.play-now-btn-container {
+  width: fit-content;
+  margin: 40px auto;
+}
+.play-now-btn {
+  background: #5e35b1;
+  color: #fff;
+  width: 125px;
+  height: 41px;
+  /* padding: 9px 59px; */
+  border-radius: 20px;
+  /* font-size: 19px; */
+  border: none;
+  outline: none !important;
+}
+
+.game-thumbnail {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.warning-message,
+.error-message {
+  font-size: 18px;
+  color: #ff4d4f;
+  margin-bottom: 10px;
+}
+
+.launch-game-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  /* Green background */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.launch-game-button:disabled {
+  background-color: #888;
+  /* Gray background for disabled buttons */
+  cursor: not-allowed;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  background-color: #fff !important;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.close-overlay-button {
+  margin-top: 10px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff4d4f;
+  /* Red background */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+.game-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .game-launch-box2 {
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+  }
+  .game-heading-container {
+    h1 {
+      font-size: 31px;
+    }
+  }
+  .dcl-main-container {
+    width: 100% !important;
+    height: 100%;
+    margin: 20px auto;
+  }
+  .dcl-img-container {
+    width: 100%;
+    height: 100%;
+  }
+  .play-now-btn-container {
+    width: fit-content;
+    margin: 20px auto !important;
+  }
+  .css-16pu6la {
+    background-color: transparent !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .game-launch-container {
+    padding: 10px;
+  }
+
+  .game-launch-box,
+  .game-launch-box2 {
+    width: 90%;
+    max-width: 700px;
+    padding: 15px;
+  }
+
+  .game-heading-container h1 {
+    font-size: 34px;
+  }
+
+  .dcl-main-container {
+    width: 90%;
+  }
+
+  .dcl-img-container,
+  .dcl-player-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .play-now-btn-container {
+    margin: 30px auto;
+  }
+
+  .play-now-btn {
+    width: 140px;
+    height: 45px;
+  }
+
+  .game-thumbnail {
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  .overlay-content {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media only screen and (min-width: 901px) and (max-width: 1440px) {
+  .game-launch-container {
+    padding: 20px;
+  }
+
+  .game-launch-box,
+  .game-launch-box2 {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .game-heading-container h1 {
+    font-size: 36px;
+  }
+
+  .dcl-main-container {
+    width: 85%;
+  }
+
+  .dcl-img-container,
+  .dcl-player-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .play-now-btn-container {
+    margin: 35px auto;
+  }
+
+  .play-now-btn {
+    width: 150px;
+    height: 48px;
+  }
+
+  .game-thumbnail {
+    max-width: 350px;
+    margin-bottom: 18px;
+  }
+
+  /* .overlay-content {
+    width: 85%;
+    height: 85%;
+  } */
+}
+/* Mobile (Portrait and Landscape) */
+@media only screen and (max-width: 600px) {
+  .overlay-content {
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+  }
+}
+
+/* Tablets (Portrait and Landscape) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .overlay-content {
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+  }
+}
+
+/* Laptops (Small and Medium) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .overlay-content {
+    width: 85%;
+    height: 85%;
+    border-radius: 10px;
+  }
+}
+
+/* Large screens (Desktops and larger laptops) */
+@media only screen and (min-width: 1201px) {
+  .overlay-content {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+  }
+}
