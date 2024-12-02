@@ -5,7 +5,6 @@ import { useTheme } from "@mui/material/styles";
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 
-
 // project imports
 import NavItem from "../NavItem";
 import NavCollapse from "../NavCollapse";

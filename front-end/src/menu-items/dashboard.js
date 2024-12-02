@@ -70,19 +70,12 @@ const dashboard = {
       icon: icons.IconGift,
       breadcrumbs: false,
     },
-    {
-      id: "login",
-      title: "login",
-      type: "item",
-      url: "/dashboard/login",
-      icon: icons.IconTrophy,
-      breadcrumbs: false,
-    },
+
     {
       id: "logout",
       title: "Logout",
       type: "item",
-      url: "/",
+      url: "/login",
       icon: icons.IconTrophy,
       breadcrumbs: false,
     },

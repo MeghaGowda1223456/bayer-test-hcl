@@ -47,7 +47,8 @@ function LoginForm(props) {
       setErrorMessage(message);
       return;
     }
-
+    localStorage.setItem("isAutenticated", true);
+    window.location.href = "/dashboard/default";
     // If both email and password are valid
     alert("Email: " + email + "\n" + "Password: " + password);
   };

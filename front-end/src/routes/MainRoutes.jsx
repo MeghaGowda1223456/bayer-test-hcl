@@ -10,6 +10,7 @@ import MainLayout from "../layout/MainLayout";
 import LoginForm from "../pages/bayers/loginpage/Loginpage";
 import DashBoardComponent from "../pages/bayers/dashboardPage/DashBoardComponent";
 import Apointments from "../pages/Appointment";
+import ProtectedRoute from "./PrivateRouts";
 
 
 // dashboard routing
@@ -30,8 +31,10 @@ import Apointments from "../pages/Appointment";
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-  // path: "/",
-  element: <MainLayout />,
+  path: "/",
+  element: <ProtectedRoute>
+        <MainLayout />
+      </ProtectedRoute>,
   children: [
     {
       path: "/",

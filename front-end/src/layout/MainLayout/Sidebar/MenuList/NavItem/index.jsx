@@ -18,6 +18,7 @@ import { MENU_OPEN, SET_MENU } from "../../../../../store/actions";
 
 // assets
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { Button } from "@mui/material";
 
 // ==============================|| SIDEBAR MENU LIST ITEMS ||============================== //
 
@@ -73,6 +74,11 @@ const NavItem = ({ item, level }) => {
     }
     // eslint-disable-next-line
   }, [pathname]);
+  const handleLogout = () => {
+    // Clear authentication data (e.g., from localStorage or global state)
+    localStorage.removeItem("isAutenticated");
+    window.location.href = "/login";
+  };
 
   return (
     <ListItemButton
@@ -94,16 +100,17 @@ const NavItem = ({ item, level }) => {
       </ListItemIcon>
       <ListItemText
         primary={
-          <Typography
+          <Button
             variant={
               customization.isOpen.findIndex((id) => id === item.id) > -1
                 ? "h5"
                 : "body1"
             }
             color="inherit"
+            onClick={item.title === "Logout" ? handleLogout : undefined}
           >
             {item.title}
-          </Typography>
+          </Button>
         }
         secondary={
           item.caption && (

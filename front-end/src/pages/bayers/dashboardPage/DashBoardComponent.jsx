@@ -81,7 +81,13 @@ const Dashboard = () => {
       {/* Action Buttons */}
       <Grid container spacing={2} mt={2} justifyContent="center">
         <Grid item>
-          <Button variant="contained" color="success">
+          <Button
+            variant="contained"
+            color="success"
+            onClick={() => {
+              window.location.href = "/dashboard/apointments";
+            }}
+          >
             Book Appointment
           </Button>
         </Grid>
