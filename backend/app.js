@@ -18,7 +18,9 @@ let response = {
 
 
 app.get("/health-topics", (req, res, next) => 
-{   
+{  
+    try
+    {
     let sql = "select id,title,description from hosp_feature";
     dbconn.query(sql,(err,rows) =>
     {
@@ -41,12 +43,22 @@ app.get("/health-topics", (req, res, next) =>
                 res.send(response);
             }
  
-    });
+        });
+    }
+    catch
+    {
+        response.status = "failure";
+        response.code = 1000;
+        response.message = "Sorry something went wrong!!"
+        res.send(response);
+    }
 });
 
 
 app.get("/user-type", (req, res, next) => 
-    {   
+{   
+    try
+    {
         let sql = "select id,name from user_type";
         dbconn.query(sql,(err,rows) =>
         {
@@ -69,11 +81,20 @@ app.get("/user-type", (req, res, next) =>
                 }
      
         });
-    });
+    }
+    catch
+    {
+        response.status = "failure";
+        response.code = 1000;
+        response.message = "Sorry something went wrong!!"
+        res.send(response);
+    }
+});
 
 
     app.get("/appointment-details", (req, res, next) => 
-        {   
+    {   
+        try{
             let doctor_id = req.query.doctorId;
             let count = req.query.count;
             let sql = `SELECT ad.id,ad.slot_time,ad.appointment_date,ad.reason,ad.create_date, u.name as 'doctor_name', (SELECT name FROM user WHERE id=ad.patient_user_id) as 'patient_name' FROM appointment_details ad INNER join user u on u.id = ad.doctor_user_id where ad.doctor_user_id= ${doctor_id} and appointment_completed=0 order by id asc limit 0,${count}`;
@@ -99,11 +120,20 @@ app.get("/user-type", (req, res, next) =>
          
          
             });
-        });
+        }
+        catch
+        {
+            response.status = "failure";
+            response.code = 1000;
+            response.message = "Sorry something went wrong!!"
+            res.send(response);
+        }
+});
     
     
 app.get("/history", (req, res, next) => 
-    {   
+{
+    try{   
         let doctor_id = req.query.doctorId;
         let count = req.query.count;
         let sql = `SELECT ad.id,ad.slot_time,ad.appointment_date,ad.reason,ad.create_date, u.name as 'doctor_name', (SELECT name FROM user WHERE id=ad.patient_user_id) as 'patient_name' FROM appointment_details ad INNER join user u on u.id = ad.doctor_user_id where ad.doctor_user_id= ${doctor_id} and appointment_completed=1 order by id desc limit 0,${count}`;
@@ -128,15 +158,24 @@ app.get("/history", (req, res, next) =>
                     response.message = "doctor list"
                     res.send(response);
                 }
-     
-     
         });
-    });
+    }
+    catch
+    {
+        response.status = "failure";
+        response.code = 1000;
+        response.message = "Sorry something went wrong!!"
+        res.send(response);
+    }
+});
 
     
 
 app.get("/getdoctors", (req, res, next) => 
-    {   
+{
+    try
+    { 
+
         let sql = "select id,name,title from user where user_type=1";
         dbconn.query(sql,(err,rows) =>
         {
@@ -160,7 +199,15 @@ app.get("/getdoctors", (req, res, next) =>
      
      
         });
-    });
+    }
+    catch
+    {
+        response.status = "failure";
+        response.code = 1000;
+        response.message = "Sorry something went wrong!!"
+        res.send(response);
+    }
+});
 
 app.post("/login",(req,res,next) =>
 {
