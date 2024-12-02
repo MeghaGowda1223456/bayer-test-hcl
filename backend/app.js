@@ -5,6 +5,10 @@ var user = require("./model/userHandler");
 var feature = require("./model/featureHandler");
 var dbconn = require("./dbcon/db");
 bodyParser = require('body-parser');
+let HttpResponse =  require("./model/util");
+let ResponseHandler =  require("./model/response");
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -171,7 +175,7 @@ app.get("/history", (req, res, next) =>
 
     
 
-app.get("/getdoctors", (req, res, next) => 
+app.get("/doctors", (req, res, next) => 
 {
     try
     { 
