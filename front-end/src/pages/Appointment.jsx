@@ -30,7 +30,7 @@ function Appointment() {
 
                     <input type="text" placeholder='[Calendar Placeholder]' className="p-4" />
                 </div>
-                <div className='w-[50%] bg-blue-100 h-full gap-3 text-custom-blue text-md flex flex-col p-4 font-semibold'>
+                <div className='w-[50%] bg-slate-50 h-full gap-3 text-custom-blue text-md flex flex-col p-4 font-semibold'>
                     <label>Available Time Slots</label>
                     <div className=' grid grid-cols-3 grid-rows-2 gap-2 '>
                     
