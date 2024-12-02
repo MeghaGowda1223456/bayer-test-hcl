@@ -1,4 +1,4 @@
-import { lazy } from "react";
+
 
 // project imports
 import MainLayout from "../layout/MainLayout";
@@ -6,9 +6,12 @@ import Loadable from "../ui-component/Loadable";
 import BalanceComponent from "../pages/balancePage/BalanceComponent";
 import LeaderBoardComponent from "../pages/leaderboardPage/LeaderBoardComponent";
 import GameLaunch from "../pages/GameLaunch";
-import DashBoardComponent from "../pages/dashboardPage/DashBoardComponent";
+
 import MyrewardsComponent from "../pages/rewardsPage/MyrewardsComponent";
 import Appointment from "../pages/Appointment";
+import LoginForm from "../pages/bayers/loginpage/Loginpage";
+import DashBoardComponent from "../pages/bayers/dashboardPage/DashBoardComponent";
+
 
 // dashboard routing
 // const DashboardDefault = Loadable(lazy(() => import("../views/dashboard")));
@@ -43,17 +46,14 @@ const MainRoutes = {
           element: <DashBoardComponent />,
         },
         {
-          path: "games",
-          element: <GameLaunch />,
+          path: "login",
+          element: <LoginForm />,
         },
         {
-          path: "balance",
-          element: (
-            <div>
-              <BalanceComponent />
-            </div>
-          ),
+          path: "patient-list",
+          element: <LoginForm />,
         },
+    
         {
           path: "rewards",
           element: <MyrewardsComponent />,
@@ -76,59 +76,8 @@ const MainRoutes = {
         },
       ],
     },
-    // {
-    //   path: "utils",
-    //   children: [
-    //     {
-    //       path: "util-typography",
-    //       element: <UtilsTypography />,
-    //     },
-    //   ],
-    // },
-    // {
-    //   path: "utils",
-    //   children: [
-    //     {
-    //       path: "util-color",
-    //       element: <UtilsColor />,
-    //     },
-    //   ],
-    // },
-    // {
-    //   path: "utils",
-    //   children: [
-    //     {
-    //       path: "util-shadow",
-    //       element: <UtilsShadow />,
-    //     },
-    //   ],
-    // },
-    // {
-    //   path: 'icons',
-    //   children: [
-    //     {
-    //       path: 'tabler-icons',
-    //       element: <UtilsTablerIcons />
-    //     }
-    //   ]
-    // },
-    // {
-    //   path: 'icons',
-    //   children: [
-    //     {
-    //       path: 'material-icons',
-    //       element: <UtilsMaterialIcons />
-    //     }
-    //   ]
-    // },
-    {
-      path: "sample-page",
-      element: <>hhhhhhhhhhhhhhhhsssssss</>,
-    },
-    {
-      path: "appointment",
-      element: <Appointment />
-    }
+
+  
   ],
   // path: "/main",
   // element: <div style={{ color: "red" }}> hfjdfhjfdh</div>,
