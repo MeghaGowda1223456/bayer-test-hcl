@@ -1,0 +1,34 @@
+@media only screen and (max-width: 600px) {
+  .walletDetails p {
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .walletDetails-wrapper {
+    top: 0.25rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .walletDetails p {
+    font-size: 0.875rem;
+  }
+  .game-wallet-details {
+    font-size: 0.75rem;
+  }
+  .walletInfo {
+    margin-top: 0.75rem;
+  }
+}
+
+.responsive-imag {
+  max-height: 20rem; 
+}
+
+
+@media (max-width: 768px) {
+  .responsive-imag {
+    min-height: 20rem; 
+  }
+}
+

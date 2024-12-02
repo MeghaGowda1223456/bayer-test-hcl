@@ -1,0 +1,75 @@
+/* src/styles/Header.css */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 4rem;
+    /* background: linear-gradient(to bottom, #000000, #000000); */
+    /* background-color: #000; */
+    /* Semi-transparent background */
+    /* border: 1px solid red; */
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    /* backdrop-filter: blur(10px); */
+    /* Add blur effect */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    /* Limit max width */
+    /* border: 1px solid yellow; */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 51px;
+    height: 51px;
+    justify-content: space-evenly;
+}
+
+.logo {
+    height: 100% !important;
+    width: 100%;
+    /* Adjust the size of the logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    /* Increase space between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4F21A1;
+    /* Change the hover color */
+}
+
+.wallet-button {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.wallet-btn{
+    background-color: #26124A !important;
+}
