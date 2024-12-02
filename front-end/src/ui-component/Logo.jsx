@@ -14,7 +14,12 @@ const Logo = () => {
   return (
     // if you want to use image instead of svg uncomment following, and comment out <svg> element.
 
-    <img src={logo} alt="Berry" width="60" style={{ borderRadius: "100px" }} />
+    <img
+      src={"https://www.bayer.com/themes/custom/bayer_cpa/logo.svg"}
+      alt="Berry"
+      width="60"
+      style={{ borderRadius: "100px" }}
+    />
 
     // <svg
     //   width="92"

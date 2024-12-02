@@ -101,7 +101,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
           </div>
         </Box>
 
-        <Box style={{ display: "flex", alignItems: "center" }}>
+        {/* <Box style={{ display: "flex", alignItems: "center" }}>
           <Typography
             px={2}
             variant="h3"
@@ -153,7 +153,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
               </MenuItem>
             </Menu>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </>
   );

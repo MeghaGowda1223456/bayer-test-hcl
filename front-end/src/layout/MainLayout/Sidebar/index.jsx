@@ -47,7 +47,6 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
     } else {
       resetState();
     }
-    
   }, [isConnected]);
   const fetchUserDetails = async () => {
     // setLoading(true);
@@ -98,8 +97,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
   const drawer = (
     <>
       <Box sx={{ display: { xs: "block", md: "none" } }}>
-        <Box sx={{ display: "flex", p: 2,
-           mx: "auto" }}>
+        <Box sx={{ display: "flex", p: 2, mx: "auto", my: 4 }}>
           <LogoSection />
         </Box>
       </Box>
@@ -112,68 +110,39 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
             paddingRight: "16px",
           }}
         > */}
-          <Box
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: "column",
+          }}
+        >
+          <MenuList />
+          {/* <Box
             sx={{
+              bottom: 0,
               display: "flex",
-              justifyContent: "space-between",
-              flexDirection: "column",
+              maxWidth: "11rem",
+              justifyContent: "space-evenly",
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                padding: 2,
-                columnGap: "1rem",
-              }}
-            >
-              <Avatar sx={{ width: 25, height: 25 }} />
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <Typography variant="h4" noWrap>
-                  {walletDetails !== null
-                    ? walletDetails?.PlayerUsername
-                    : "Connect Wallet"}
-                </Typography>
-                <Typography variant="body2" noWrap>
-                  {walletDetails !== null
-                    ? formatWalletAddress(walletDetails?.WalletPublicAddress)
-                    : ""}
-                </Typography>
-              </Box>
-            </Box>
-            <MenuList />
-            <Box
-              sx={{
-                bottom: 0,
-                display: "flex",
-                maxWidth: "11rem",
-                justifyContent: "space-evenly",
-              }}
-            >
-              <Link href="https://x.com/Peer2Play_P2P?mx=2" target="_blank">
-                <img src={Twitter} alt="Twitter" />
-              </Link>
-              <Link href="https://discord.com/invite/jnQMgmsQW8" target="_blank">
-                <img src={Discord} alt="Discord" />
-              </Link>
-              <Link href="https://t.me/Peer2PlayAI" target="_blank">
-                <img src={Telegram} alt="Telegram" />
-              </Link>
-            </Box>
-          </Box>
+            <Link href="https://x.com/Peer2Play_P2P?mx=2" target="_blank">
+              <img src={Twitter} alt="Twitter" />
+            </Link>
+            <Link href="https://discord.com/invite/jnQMgmsQW8" target="_blank">
+              <img src={Discord} alt="Discord" />
+            </Link>
+            <Link href="https://t.me/Peer2PlayAI" target="_blank">
+              <img src={Telegram} alt="Telegram" />
+            </Link>
+          </Box> */}
+        </Box>
         {/* </PerfectScrollbar> */}
       </BrowserView>
       <MobileView>
         <Box sx={{ px: 2 }}>
           <MenuList />
-          <Box
+          {/* <Box
               sx={{
                 bottom: 0,
                 display: "flex",
@@ -190,7 +159,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
               <Link href="https://t.me/Peer2PlayAI" target="_blank">
                 <img src={Telegram} alt="Telegram" />
               </Link>
-            </Box>
+            </Box> */}
           {/* <MenuCard /> */}
           {/* <Stack direction="row" justifyContent="center" sx={{ mb: 2 }}>
             <Chip
