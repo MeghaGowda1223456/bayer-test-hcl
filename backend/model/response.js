@@ -1,3 +1,4 @@
+const { Module } = require("module");
 
 class ResponseObject {
     constructor() {
@@ -81,4 +82,4 @@ class ResponseObject {
     }
 }
 
-//export default new ResponseObject();
+Module.exports=ResponseObject;

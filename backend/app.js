@@ -7,19 +7,79 @@ var dbconn = require("./dbcon/db");
 bodyParser = require('body-parser');
 let HttpResponse =  require("./model/util");
 let ResponseHandler =  require("./model/response");
-
+const jwt = require('jsonwebtoken');
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const SECRET_KEY = "xyz123";
+
+const verifyToken = (req, res, next) => {
+    const token = req.headers['authorization'];
+
+    console.log(req.headers);
+    if (!token) {
+        return res.status(401).json({
+            status: "failure",
+            code: 401,
+            message: "Access denied. No token provided."
+        });
+    }
+
+    try {
+        const decoded = jwt.verify(token, SECRET_KEY);
+        req.user = decoded; 
+        next(); 
+    } catch (err) {
+        console.log(err);
+        res.status(401).json({
+            status: "failure",
+            code: 401,
+            message: "Invalid or expired token."
+        });
+    }
+};
+
+
 let response = {
     status:"success",
     code: 200,
     data:"",
-    message:""
+    message:"",
+    response:""
 }
 
+
+
+app.get("/test",verifyToken,(req,res) => {
+
+    res.send("sddsf");
+    //return HttpResponse(res, ResponseHandler.invalid('test 123'));
+})
+
+
+const verifyParameters = (req, res, next) => 
+{
+       validRegEx = /^[^\\\/&]*$/;
+       let doctorId = !isNaN(req.body.doctorId)?true:false;
+       let patientId = !isNaN(req.body.patientId)?true:false;
+       let  = req.body.slot_time.match(validRegEx)?true:false;
+       if(!doctorId || !patientId || !patientId)
+       {
+        return res.status(401).json({
+            status: "failure",
+            code: 401,
+            message: "Access denied. No token provided."
+             });
+       }  
+       else
+    {
+        next();
+    }   
+
+
+}
 
 app.get("/health-topics", (req, res, next) => 
 {  
@@ -228,10 +288,13 @@ app.post("/login",(req,res,next) =>
        
         if(rows.length>0)
         {
+            const token = jwt.sign({ user_email }, SECRET_KEY, { expiresIn: "1h" });
             response.status = "success";
             response.code = 200;
             response.data = rows;
-            response.message = "login succussful"
+            response.message = "login succussful";
+            response.token = token;
+          
             res.send(response);
         }
         else
@@ -253,7 +316,7 @@ catch
 }
 });
 
-app.post("/createappointment",(req,res,next) =>
+app.post("/appointments",verifyParameters,(req,res,next) =>
     {
         try{
     

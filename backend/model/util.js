@@ -16,4 +16,4 @@ const ResponseHandler = (httpResponse, responseObject) => {
     httpResponse.send(responseObject);
 }
 
-//export default ResponseHandler;
+module.exports = ResponseHandler;
