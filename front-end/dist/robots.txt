@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /search
+Allow: /dashboard/default
+Allow: /dashboard/games
+Allow: /dashboard/balance
+Allow: /dashboard/leaderboard

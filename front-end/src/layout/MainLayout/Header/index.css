@@ -1,0 +1,14 @@
+.iconForWeb{
+  
+}
+.iconForMobile{
+display: none;
+}
+@media only screen and (max-width: 600px) {
+    .iconForWeb{
+        display: none;
+    }
+    .iconForMobile{
+    display: block;
+    }
+}
