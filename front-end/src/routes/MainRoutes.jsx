@@ -8,6 +8,7 @@ import LeaderBoardComponent from "../pages/leaderboardPage/LeaderBoardComponent"
 import GameLaunch from "../pages/GameLaunch";
 import DashBoardComponent from "../pages/dashboardPage/DashBoardComponent";
 import MyrewardsComponent from "../pages/rewardsPage/MyrewardsComponent";
+import Appointment from "../pages/Appointment";
 
 // dashboard routing
 // const DashboardDefault = Loadable(lazy(() => import("../views/dashboard")));
@@ -124,9 +125,13 @@ const MainRoutes = {
       path: "sample-page",
       element: <>hhhhhhhhhhhhhhhhsssssss</>,
     },
+    {
+      path: "appointment",
+      element: <Appointment />
+    }
   ],
-  path: "/main",
-  element: <div style={{ color: "red" }}> hfjdfhjfdh</div>,
+  // path: "/main",
+  // element: <div style={{ color: "red" }}> hfjdfhjfdh</div>,
 };
 
 export default MainRoutes;
